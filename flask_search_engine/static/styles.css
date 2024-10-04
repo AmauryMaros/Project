@@ -1,0 +1,74 @@
+body{
+  font-family: "Roboto", sans-serif ;
+}
+
+h2 {
+  text-align: center;
+  color :white;
+  background-color: #01A881;
+  width:50%;
+  margin: 20px auto 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+h3 {
+  color : #01A88A;
+}
+
+p {
+  text-align: justify;
+}
+
+form {
+  width: 100%;
+}
+
+.searchbox{
+  width : 35%;
+  margin: 50px auto 10px;
+  border: 1px solid #01A88A;
+  border-radius: 30px;
+  padding : 20px;
+}
+
+.resultbox{
+  width : 45%;
+  margin: 35px auto 35px;
+}
+
+#search{
+  background-color: #01A88A;
+  border-radius : 15px;
+  color: white;
+  font-weight: normal;
+  border : 2px solid white;
+  margin: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+select{
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid #01A88A;
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  height: 35px;
+}
+
+.footer{
+  width:50%;
+  margin: auto;
+  font-size : 10px;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+}

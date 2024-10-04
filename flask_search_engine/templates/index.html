@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>Search Engine</title>
+</head>
+  
+<body>
+  <h2>Database Search Engine</h2>
+  
+  <div class="searchbox">
+    <h3>Search a Game</h3>
+    <form action="/choice" method="POST">
+      <select name="game_choice" aria-label="Default select example">
+        {% for game in games_name %}
+          <option value="{{game}}">{{game}}</option>
+        {% endfor %}
+          <input id="search" type="submit" value="Search">
+      </select>
+    </form>
+  <p>Try to find your favorite video games into the database to get informations on it</p>
+  </div>
+
+  <div class="resultbox">
+  {% if game_choice  %}
+  
+    <h3>Results</h3>
+    <p>The game {{game_choice}} developped on {{platform[games_name.index(game_choice)]}} is released on {{date[games_name.index(game_choice)]}}. He got a score of {{metascore[games_name.index(game_choice)]}} / 100 on Metacritic and the players rated it {{userscore[games_name.index(game_choice)]}} / 10.</p>
+    <p>More information : <a href="https://www.metacritic.com{{url[games_name.index(game_choice)]}}">{{game_choice}}</a></p>
+  
+  {%endif%}
+  </div>
+</div>
+</select>
+
+  <p class="footer">This web app is developped with Flask. The database (20 000 references) is limited at 20 here and has been created with MySQL from webscraped data with BeautifulSoup. The database is deployed on the cloud with PlanetScale. The app is deployed with render.com</p>
+</body>
+</html>
